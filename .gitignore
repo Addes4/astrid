@@ -1,0 +1,6 @@
+adrian_spec
+.venv
+.venv310
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
