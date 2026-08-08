@@ -217,7 +217,6 @@ def astrid_annotation(adata, output_file, input_prefix, outDir, species = "human
             adata_file=os.path.splitext(output_file)[0] + "_" + final_key + "_pseudobulk_matrix.csv",
             output_file=singleR_file,
             species=species,
-            rscript_path="/usr/bin/Rscript",
             reference_file=reference_file
         )
 
