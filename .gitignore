@@ -1,6 +1,16 @@
-adrian_spec
+# miljöer / cache
 .venv
 .venv310
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+
+# adrian_spec: spåra kod och små referensoutputs, inte data
+adrian_spec/forAdrian 2/
+adrian_spec/**/*.h5ad
+adrian_spec/**/*pseudobulk_matrix.csv
+adrian_spec/nb_run/
+adrian_spec/vignette_run/
+
+# labbinterna mötesanteckningar - beslut om publicering ej taget
+adrian_spec/context/LOGG.md
