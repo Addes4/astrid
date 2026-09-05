@@ -286,14 +286,14 @@ def runSingleR(adata_file, output_file, species = "human", rscript_path = None, 
     if rscript_path is None:
         rscript_path = shutil.which("Rscript") or "Rscript"
 
-    run_singler_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "RunSingleR.R")
-
     print('Running SingleR ...')
-    if(reference_file == ""):
-        os.system('nice -19 ' + rscript_path + ' ' + run_singler_script + ' '+adata_file + ' ' + output_file + ' ' + species)
+    singleR_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "RunSingleR.R")
+
+    if reference_file == "":
+        os.system('nice -19 ' + rscript_path + ' ' + singleR_script + ' ' + adata_file + ' ' + output_file + ' ' + species)
     else:
         print("\t... with reference: " + reference_file)
-        os.system('nice -19 ' + rscript_path + ' ' + run_singler_script + ' '+adata_file + ' ' + output_file + ' ' + species + ' ' + reference_file)
+        os.system('nice -19 ' + rscript_path + ' ' + singleR_script + ' ' + adata_file + ' ' + output_file + ' ' + species + ' ' + reference_file)
     result=pd.read_csv(output_file)
 
     print('SingleR completed.')
